@@ -20,6 +20,7 @@ async function index(req, res, next) {
       // send earning, random 5-20
       const now = Date.now();
       const earning = Math.random * 20 + 5;
+
       // pusher send here..
       pusher.trigger("my-channel", "my-event", {
         datetime: now,
